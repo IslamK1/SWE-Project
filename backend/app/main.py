@@ -1,7 +1,18 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+from app.database import init_db
+from app.products.models import Product, User
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    print("Initializing database...")
+    await init_db()
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
 	CORSMiddleware,

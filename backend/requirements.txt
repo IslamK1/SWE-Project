@@ -1,1 +1,5 @@
 fastapi[standard]
+alembic
+asyncpg
+sqlalchemy
+pydantic-settings

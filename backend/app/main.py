@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import init_db
 from app.products.models import Product, User
+from app.products.router import router as products_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -12,7 +13,7 @@ async def lifespan(app: FastAPI):
     await init_db()
     yield
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(root_path="/api", lifespan=lifespan)
 
 app.add_middleware(
 	CORSMiddleware,
@@ -22,6 +23,9 @@ app.add_middleware(
 	allow_headers=["*"],
 )
 
-@app.get("/api/hello-world")
+@app.get("/hello-world")
 def hello_world():
     return {"response": "nurbek chert"}
+
+
+app.include_router(products_router)

@@ -18,16 +18,3 @@ class Product(Base):
 
     def __repr__(self):
         return str(self)
-
-
-class User(Base):
-    id: Mapped[int_pk]
-    first_name: Mapped[str]
-    last_name: Mapped[str_null_true]
-    products: Mapped[list["Product"]] = relationship("Product", back_populates="supplier")
-
-    def __str__(self):
-        return f"{self.__class__.__name__}(id={self.id}, first_name={self.first_name!r})"
-
-    def __repr__(self):
-        return str(self)

@@ -6,16 +6,16 @@ A web platform for managing a supplier platform (owner/manager). Built with **Re
 
 ## Demo
 
-![Login Screenshot](src/assets/Login.png)  
-![Signup Screenshot](src/assets/Signup.png)  
-![Dashboard Screenshot](src/assets/Dashboard.png)  
-![Catalog Screenshot](src/assets/Catalog.png)  
-![Orders Screenshot](src/assets/Orders.png)  
-![Links Screenshot](src/assets/Links.png)  
-![Staff Screenshot](src/assets/Staff.png)  
-![Incidents Screenshot](src/assets/Incidents.png)  
-![Chat Screenshot](src/assets/Chat.png)  
-![Settings Screenshot](src/assets/Settings.png)  
+![Login Screenshot](assets/Login.png)  
+![Signup Screenshot](assets/Signup.png)  
+![Dashboard Screenshot](assets/Dashboard.png)  
+![Catalog Screenshot](assets/Catalog.png)  
+![Orders Screenshot](assets/Orders.png)  
+![Links Screenshot](assets/Links.png)  
+![Staff Screenshot](assets/Staff.png)  
+![Incidents Screenshot](assets/Incidents.png)  
+![Chat Screenshot](assets/Chat.png)  
+![Settings Screenshot](assets/Settings.png)  
 
 ---
 

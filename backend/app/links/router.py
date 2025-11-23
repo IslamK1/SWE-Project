@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends
 from app.links.dao import LinkDAO
 from app.users.dependecies import get_current_user
 from app.users.models import User
+from app.chat.dao import ChatDAO
 
 router = APIRouter(prefix='/links', tags=['Link endpoints'])
 
@@ -53,6 +54,7 @@ async def approve_request(consumer_id: int, current_user: User = Depends(get_cur
         supplier_id = current_user.supplier_owner_id
     result = await LinkDAO.update(filter_by={'supplier_id': supplier_id, 'consumer_id': consumer_id}, is_approved=True)
     if result:
+        await ChatDAO.add(supplier_id=supplier_id, consumer_id=consumer_id)
         return {'message': 'Request approved succesfully!'}
     return {'message': 'Request failed to approve!'}
 
@@ -65,5 +67,6 @@ async def reject_request(consumer_id: int, current_user: User = Depends(get_curr
         supplier_id = current_user.supplier_owner_id
     result = await LinkDAO.delete(supplier_id=supplier_id, consumer_id=consumer_id)
     if result:
+        await ChatDAO.delete(supplier_id=supplier_id, consumer_id=consumer_id)
         return {'message': 'Request rejected succesfully!'}
     return {'message': 'Request failed to reject!'}

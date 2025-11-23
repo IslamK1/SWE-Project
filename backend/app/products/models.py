@@ -9,7 +9,6 @@ class Product(Base):
     name: Mapped[str]
     description: Mapped[str]
     price: Mapped[int] = mapped_column(nullable=False)
-    quantity: Mapped[int] = mapped_column(nullable=False)
     supplier_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
     supplier: Mapped["User"] = relationship("User", back_populates="products")
 

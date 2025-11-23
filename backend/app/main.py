@@ -29,9 +29,9 @@ app.add_middleware(
 	allow_headers=["*"],
 )
 
-@app.get("/hello-world")
+@app.get("/")
 def hello_world():
-    return {"response": "nurbek chert"}
+    return {"message": "Hello World!"}
 
 
 app.include_router(products_router)

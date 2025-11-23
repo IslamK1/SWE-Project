@@ -1,4 +1,3 @@
-// src/pages/Auth/SignupPage.jsx
 import { useState } from "react";
 import { Link, useNavigate, Navigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
@@ -15,7 +14,6 @@ export default function SignupPage() {
   });
   const [error, setError] = useState("");
 
-  // If already logged in, redirect
   if (user) {
     return <Navigate to="/dashboard" replace />;
   }
@@ -42,8 +40,7 @@ export default function SignupPage() {
       <div className="w-full max-w-md bg-white border rounded-xl shadow-sm p-6">
         <h1 className="text-2xl font-semibold mb-1">Create supplier account</h1>
         <p className="text-sm text-slate-600 mb-4">
-          Sign up as <strong>Owner</strong> or <strong>Manager</strong>. In a real
-          system this would create your account on the backend.
+          Sign up as <strong>Owner</strong> or <strong>Manager</strong>. 
         </p>
 
         {error && (
@@ -110,7 +107,6 @@ export default function SignupPage() {
               <option value="MANAGER">Manager</option>
             </select>
             <p className="mt-1 text-[11px] text-slate-400">
-              Sales representatives are created later on the Staff page.
             </p>
           </div>
 

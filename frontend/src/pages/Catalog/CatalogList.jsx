@@ -64,7 +64,7 @@ export default function CatalogList() {
 
   const isOwner = user.role === "OWNER";
   const isManager = user.role === "MANAGER";
-  const canManage = isOwner || isManager; // only web roles anyway
+  const canManage = isOwner || isManager; // only web roles
 
   const filteredProducts = useMemo(() => {
     return products.filter((p) => {

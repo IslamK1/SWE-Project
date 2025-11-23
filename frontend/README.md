@@ -1,16 +1,101 @@
-# React + Vite
+# SWE-Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web platform for managing a supplier platform (owner/manager). Built with **React** and **TailwindCSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## React Compiler
+![Login Screenshot](src/assets/Login.png)  
+![Signup Screenshot](src/assets/Signup.png)  
+![Dashboard Screenshot](src/assets/Dashboard.png)  
+![Catalog Screenshot](src/assets/Catalog.png)  
+![Orders Screenshot](src/assets/Orders.png)  
+![Links Screenshot](src/assets/Links.png)  
+![Staff Screenshot](src/assets/Staff.png)  
+![Incidents Screenshot](src/assets/Incidents.png)  
+![Chat Screenshot](src/assets/Chat.png)  
+![Settings Screenshot](src/assets/Settings.png)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React + Vite, Tailwind CSS  
+- **Routing:** React Router  
+
+---
+
+## Features
+
+- **Authentication:** Login and Signup functionality  
+- **Dashboard:** Overview of platform statistics and activity  
+- **Catalog Management:** Add, edit, delete products or services  
+- **Orders:** View and manage orders  
+- **Staff Management:** Manage staff members and roles  
+- **Incidents:** Track and resolve incidents  
+- **Chat:** Real-time messaging between users  
+- **Links & Settings:** Manage platform links and application settings  
+
+---
+
+## Installation & Running the Project
+
+### 1. Clone the repository
+git clone https://github.com/IslamK1/SWE-Project.git  
+cd SWE-Project  
+
+### 2. Install dependencies
+cd frontend  
+npm install  
+
+### 3. Start frontend
+npm run dev  
+
+The frontend will run by default on http://localhost:3000  
+
+---
+
+## Project Structure
+
+SWE-Project/  
+├── frontend/             # React frontend  
+│   ├── public/           # Static files (favicon, images, icons)  
+│   ├── src/  
+│   │   ├── assets/       # Images, screenshots, logos  
+│   │   ├── components/   # Reusable React components  
+│   │   ├── context/      # React Contexts for state management  
+│   │   ├── pages/        # Application pages (Login, Dashboard, etc.)  
+│   │   ├── App.css       # Main styles for the app  
+│   │   ├── App.jsx       # Root component of the app  
+│   │   ├── index.css     # Global styles  
+│   │   └── main.jsx      # Entry point of the app  
+├── README.md             # This file  
+└── package.json          # Frontend configuration and dependencies  
+
+---
+
+## Usage
+
+Navigate to the frontend in your browser: http://localhost:3000  
+Login or Signup to access the platform  
+View Dashboard to monitor platform statistics  
+Manage Catalog: add, edit, or delete products/services  
+Manage Orders, Staff, and Incidents  
+Use Chat to communicate in real-time  
+Manage platform Links & Settings  
+
+---
+
+## Contributing
+
+Contributions are welcome! To contribute:  
+Fork the repository  
+Create a new branch (git checkout -b feature-name)  
+Make your changes  
+Commit your changes (git commit -m "Add some feature")  
+Push to the branch (git push origin feature-name)  
+Open a pull request  
+
+---
+

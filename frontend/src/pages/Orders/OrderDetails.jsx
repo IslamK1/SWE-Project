@@ -62,7 +62,6 @@ const INITIAL_ORDERS = [
 ];
 
 // Fake complaints for orders
-// In real app, this would come from backend filtered by orderId
 const INITIAL_COMPLAINTS = [
   {
     id: 1,

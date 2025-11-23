@@ -39,8 +39,7 @@ export default function SupplierSettings() {
     if (!isOwner) return;
 
     const confirm = window.confirm(
-      "Are you sure you want to deactivate this supplier?\n\n" +
-        "After deactivation, new orders and links should be blocked (in real system)."
+      "Are you sure you want to deactivate this supplier?\n\n" 
     );
     if (!confirm) return;
 

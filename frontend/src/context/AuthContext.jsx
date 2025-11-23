@@ -1,9 +1,8 @@
-// src/context/AuthContext.jsx
 import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext(null);
 
-// Hardcoded demo users
+
 const DEMO_USERS = [
   {
     name: "Demo Owner",

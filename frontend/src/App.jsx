@@ -33,7 +33,7 @@ function ProtectedRoute({ children }) {
   return children;
 }
 
-// reuse your existing layout but with <Outlet /> inside
+// reuse existing layout but with <Outlet /> inside
 function AppLayout() {
   return (
     <div className="min-h-screen flex flex-col">

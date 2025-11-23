@@ -6,8 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.database import init_db
 from app.products.models import Product
 from app.users.models import User
+from app.links.models import Link
 from app.products.router import router as products_router
 from app.users.router import router as users_router
+from app.links.router import router as links_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -32,3 +34,4 @@ def hello_world():
 
 app.include_router(products_router)
 app.include_router(users_router)
+app.include_router(links_router)
